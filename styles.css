@@ -1,0 +1,325 @@
+:root {
+    --primary: #e47184;
+    --secondary: #89b8c2;
+    --tertiary: #a9bf8a;
+    --lightPinkAccent: #f49ba3;
+    --background: #feeed9;
+    --darkPinkAccent: #e14f66;
+    --opacity: 0.5;
+}
+
+html {
+    background: var(--background);
+    scroll-behavior: smooth;
+}
+
+/* Hero */
+#heroDesktop {
+    height: 105vh;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#heroMobile {
+    display: none;
+}
+
+@keyframes floatingHeart {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        transform: translate(-50%, -60%) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -150vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.floating-heart {
+    position: fixed;
+    left: 0; 
+    top: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1000;
+    font-size: 3.5rem;               
+    color: var(--primary);
+    animation: floatingHeart 4s ease-out forwards; 
+    will-change: transform, opacity;
+}
+
+/* #hero:active::after {
+    content: '♥';
+    position: fixed;
+    font-size: 5rem;
+    color: var(--primary);
+    animation: floatingHeart 2s ease-out forwards;
+    pointer-events: none;
+    z-index: 1000;
+    left: var(--x, 50%);
+    top: var(--y, 50%);
+} */
+
+/* Body (overall styles) */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu */
+nav > ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2rem;
+    height: 3.75rem;
+    width: 100%;
+    position: fixed;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--tertiary);
+    font-size: 1.5rem;
+    font-family: "Molengo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--background);
+}
+
+h2 {
+    font-family: "Molengo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--tertiary);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: var(--background);
+    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-out;
+    font-size: 1.5rem;
+}
+
+a:hover {
+    color: var(--darkPinkAccent);
+    font-size: 1.75rem;
+}
+
+#contactButton {
+    background: var(--lightPinkAccent);
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-left: -0.25rem;
+}
+
+/* Skills (Section) */
+#skillsContainer {
+    display: grid;
+    padding-top: 2.5rem;
+    width: 80%;
+    margin: 0 auto;
+    place-items: center;
+}
+
+#skillsHeader {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 4rem;
+}
+
+#skillsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    place-items: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+#skillsList p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+#skillsList p::after {
+    content: attr(data-label);
+    color: var(--primary);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    padding: 0 1rem;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--lightPinkAccent);
+    aspect-ratio: 1;
+    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-out;
+}
+
+.icons:hover {
+    height: 5rem;
+    width: 5rem;
+}
+
+#photoLink {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--secondary);
+}
+
+/* Resume */
+#resumeContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+}
+
+#resumeHeader {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 4rem;
+    padding-top: 2rem;
+}
+
+#resumeDiv {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+}
+
+#resumeItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem;
+}
+
+#educationHead {
+    font-size: 2rem;
+    color: var(--darkPinkAccent);
+}
+
+/* Sections */
+#skills, #resume, #about, #contact {
+    font-family: "Molengo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+section {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--tertiary);
+}
+
+/* Media Query */
+@media (max-width: 599px) {
+  #heroMobile {
+    display: grid;
+    place-content: center;
+    box-sizing: border-box;
+    margin-top: -50rem;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #heroMobile img {
+    display: block;
+    width: calc(100% - 4rem);
+    max-width: calc(100% - 4rem);
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  #heroDesktop > img {
+    display: none;
+  }
+
+  nav > ul {
+    font-size: 1.25rem;
+  }
+
+    a {
+        text-decoration: none;
+        color: var(--background);
+        transition: all 0.3s ease-in;
+        transition: all 0.3s ease-out;
+        font-size: 1.4rem;
+    }  
+
+    a:hover {
+        color: var(--darkPinkAccent);
+        font-size: 1.5rem;
+    }
+
+  #skillsContainer {
+    width: 95%;
+  }
+
+  .icons {
+    height: 3rem;
+    width: 3rem;
+    padding: 1rem;
+  }
+
+  .icons:hover {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  #skillsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 600px;
+  }
+
+  #skillsList p::after {
+        font-size: 0.875rem;
+    }
+
+    #resumeDiv {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-top: 1rem;
+    }
+
+  section {
+    height: 75vh;
+  }
+  
+}

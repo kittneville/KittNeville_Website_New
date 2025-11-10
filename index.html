@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitt Neville</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&family=Pirata+One&display=swap" rel="stylesheet">
+    <style>
+        #skillsList {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 8px;
+        }
+  </style>
+</head>
+
+<body>
+    <header> <!-- Menus -->
+        <nav id="desktopMenu">
+            <ul>
+                <li><a href="#heroDesktop">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a id="contactButton" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- <nav id="mobileMenu"></nav> -->
+    </header>
+
+    <main>
+    <!-- Name/Text Link -->
+     <div>
+        <section id="heroDesktop"><img src="BleedingHearts_Logo_TooBigResize.png" alt="A photo of bleeding hearts with the Kitt & Co logo"></section>
+        <section id="heroMobile"><img src="BleedingHearts_MediaQuery.png" alt="A photo of bleeding hearts with the Kitt & Co logo"></section>
+        <!-- JavaScript for hearts -->
+            <script>
+                (function () {
+                    const targets = [];
+                    const hd = document.getElementById('heroDesktop');
+                    const hm = document.getElementById('heroMobile');
+                    if (hd) targets.push(hd);
+                    if (hm) targets.push(hm);
+                    if (!targets.length) return;
+
+                    function createHeart(x, y) {
+                    const heart = document.createElement('span');
+                    heart.className = 'floating-heart';
+                    heart.textContent = '♥';
+                    heart.style.left = x + 'px';
+                    heart.style.top = y + 'px';
+                    document.body.appendChild(heart);
+
+                    const cleanup = () => {
+                        if (heart.parentNode) heart.parentNode.removeChild(heart);
+                        heart.removeEventListener('animationend', cleanup);
+                    };
+                    heart.addEventListener('animationend', cleanup);
+                    setTimeout(cleanup, 6000);
+                    }
+
+                    targets.forEach(el => {
+                    el.addEventListener('pointerdown', (e) => {
+                        if (e.pointerType === 'mouse' && e.button !== 0) return;
+                        createHeart(e.clientX, e.clientY);
+                    });
+                    });
+                })();
+            </script>
+    </div>
+
+    <!-- Skills -->   
+        <section id="skills">
+            <container id="skillsContainer">
+                <h3 id="skillsHeader">Skills</h3>
+                <div id="skillsList">       
+                    <p data-label="HTML5"><img src="filetype-html.png" class="icons" alt="HTML Icon"></p>
+                    <p data-label="CSS3"><img src="filetype-css.png" class="icons" alt="CSS Icon"></p>
+                    <p data-label="TypeScript"><img src="filetype-tsx.png" class="icons" alt="TypeScript Icon"></p>
+                    <p data-label="JavaScript"><img src="filetype-js.png" class="icons" alt="JavaScript Icon"></p>
+                    <p data-label="SQL"><img src="filetype-sql.png" class="icons" alt="SQL Icon"></p>
+                    <p data-label="Photography"><img src="camera.png" class="icons" alt="Camera Icon"></p>
+                </div> 
+                <a href="https://www.kittandco.ca" target="_blank" id="photoLink">Click here to check out my photography!</a>
+            </container>
+        </section>
+    <!-- Resume -->    
+        <section id="resume">
+            <container id="resumeContainer">
+                <h3 id="resumeHeader">Resume</h3>
+                <div id="resumeDiv">
+                    <div id="resumeItem">
+                        <p id="educationHead">IT Web Programming</p>
+                        <p id="educationSubHead">Nova Scotia Community College, 2025 - Current</p>
+                    </div>
+                    <div id="resumeItem">
+                        <p id="educationHead">Professional Photography</p>
+                        <p id="educationSubHead">Nova Scotia Community College, 2017 - 2019</p>
+                    </div>
+                    <div id="resumeItem">
+                        <p id="educationHead">Applied Media and Communications Arts</p>
+                        <p id="educationSubHead">Nova Scotia Community College, 2016 - 2017</p>
+                    </div>
+                </div>
+            </container>
+        </section>
+    <!-- About -->    
+        <section id="about">About</section>
+    
+    <!-- Contact -->
+        <section id="contact">Contact</section>
+    </main>
+</body>
+</html>
