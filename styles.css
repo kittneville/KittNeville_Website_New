@@ -113,7 +113,7 @@ a:hover {
 
 /* Mobile Menu */
 
-#mobileMenu {
+#mobileMenu, #hamburger {
     display: none;
 }
 
@@ -130,6 +130,7 @@ a:hover {
     text-align: center;
     color: var(--secondary);
     font-size: 4rem;
+    margin-top: -2rem;
 }
 
 #skillsList {
@@ -277,50 +278,49 @@ section {
     }
 
     #mobileMenu {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    color: white;
-    background-color: var(--tertiary);
-    list-style: none;
-    z-index: 10;
-    /* max-height: 0; */
-    opacity: 0;
-    overflow: hidden;
-    transition: all .200s ease-in-out;
-    padding: 0.75rem;
-}
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: white;
+        background-color: var(--tertiary);
+        list-style: none;
+        z-index: 10;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .200s ease-in-out;
+        padding: 0.75rem;
+    }
 
-#hamburger {
-    background-color: var(--darkPinkAccent);
-    height: 3rem;
-    width: 3rem;
-    margin: 1rem auto;
-    padding: 0.25rem;
-    border-radius: 10px;
-    cursor: pointer;
-    display: block;
-    align-items: center;
-    border: 3px solid var(--tertiary);
-}
+    #hamburger {
+        background-color: var(--darkPinkAccent);
+        height: 3rem;
+        width: 3rem;
+        margin: 1rem auto;
+        padding: 0.25rem;
+        border-radius: 10px;
+        cursor: pointer;
+        display: block;
+        align-items: center;
+        border: 3px solid var(--tertiary);
+    }
 
-.hamline {
-    width: 80%;
-    height: 2px;
-    background-color: var(--background);
-}
+    .hamline {
+        width: 80%;
+        height: 2px;
+        background-color: var(--background);
+    }
 
-.mobileText {
-    display: block;
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    font-family: "Molengo", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    width: 100%;
-}
+    .mobileText {
+        display: block;
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        font-family: "Molengo", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        width: 100%;
+    }
 
     a {
         text-decoration: none;
@@ -335,29 +335,29 @@ section {
         font-size: 1.5rem;
     }
 
-  #skillsContainer {
-    width: 95%;
-  }
+    #skillsContainer {
+        width: 95%;
+    }
 
-  .icons {
-    height: 3rem;
-    width: 3rem;
-    padding: 1rem;
-  }
+    .icons {
+        height: 3rem;
+        width: 3rem;
+        padding: 1rem;
+    }
 
-  .icons:hover {
-    height: 4rem;
-    width: 4rem;
-  }
+    .icons:hover {
+        height: 4rem;
+        width: 4rem;
+    }
 
-  #skillsList {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    max-width: 600px;
-  }
+    #skillsList {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 600px;
+    }
 
-  #skillsList p::after {
+    #skillsList p::after {
         font-size: 0.875rem;
     }
 
@@ -366,8 +366,8 @@ section {
         padding-top: 1rem;
     }
 
-  section {
-    /* height: 75vh; */
-  }
+    section {
+        /* height: 75vh; */
+    }
   
 }
