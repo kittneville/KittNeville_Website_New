@@ -57,18 +57,6 @@ html {
     will-change: transform, opacity;
 }
 
-/* #hero:active::after {
-    content: '♥';
-    position: fixed;
-    font-size: 5rem;
-    color: var(--primary);
-    animation: floatingHeart 2s ease-out forwards;
-    pointer-events: none;
-    z-index: 1000;
-    left: var(--x, 50%);
-    top: var(--y, 50%);
-} */
-
 /* Body (overall styles) */
 body {
     margin: 0;
@@ -121,6 +109,12 @@ a:hover {
     padding: 0.5rem;
     border-radius: 10px;
     margin-left: -0.25rem;
+}
+
+/* Mobile Menu */
+
+#mobileMenu {
+    display: none;
 }
 
 /* Skills (Section) */
@@ -235,7 +229,6 @@ a:hover {
 }
 
 section {
-    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,6 +255,7 @@ section {
     max-width: calc(100% - 4rem);
     height: auto;
     margin: 0 auto;
+    margin-top: -2rem;
     object-fit: cover;
     border-radius: 6px;
   }
@@ -273,6 +267,60 @@ section {
   nav > ul {
     font-size: 1.25rem;
   }
+
+  #desktopMenu {
+        display: none;
+    }
+
+    #header {
+        background-color: var(--tertiary);
+    }
+
+    #mobileMenu {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: white;
+    background-color: var(--tertiary);
+    list-style: none;
+    z-index: 10;
+    /* max-height: 0; */
+    opacity: 0;
+    overflow: hidden;
+    transition: all .200s ease-in-out;
+    padding: 0.75rem;
+}
+
+#hamburger {
+    background-color: var(--darkPinkAccent);
+    height: 3rem;
+    width: 3rem;
+    margin: 1rem auto;
+    padding: 0.25rem;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    border: 3px solid var(--tertiary);
+}
+
+.hamline {
+    width: 80%;
+    height: 2px;
+    background-color: var(--background);
+}
+
+.mobileText {
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    font-family: "Molengo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+}
 
     a {
         text-decoration: none;
@@ -319,7 +367,7 @@ section {
     }
 
   section {
-    height: 75vh;
+    /* height: 75vh; */
   }
   
 }

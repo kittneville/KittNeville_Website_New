@@ -19,6 +19,12 @@
 
 <body>
     <header> <!-- Menus -->
+        <div id="hamburger">
+            <hr class="hamline"/>
+            <hr class="hamline"/>
+            <hr class="hamline"/>
+        </div>
+        <!-- Desktop Menu -->
         <nav id="desktopMenu">
             <ul>
                 <li><a href="#heroDesktop">Home</a></li>
@@ -28,7 +34,16 @@
                 <li><a id="contactButton" href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <!-- <nav id="mobileMenu"></nav> -->
+        <!-- Mobile Menu -->
+        <nav id="mobileMenu">
+            <div>
+                <li><a class="mobileText" href="#heroDesktop">Home</a></li>
+                <li><a class="mobileText" href="#skills">Skills</a></li>
+                <li><a class="mobileText" href="#resume">Resume</a></li>
+                <li><a class="mobileText" href="#about">About</a></li>
+                <li><a class="mobileText" id="contactButton" href="#contact">Contact</a></li>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -113,5 +128,6 @@
     <!-- Contact -->
         <section id="contact">Contact</section>
     </main>
+<script src="main.js"></script>
 </body>
 </html>

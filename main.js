@@ -4,7 +4,7 @@ let isOpen = false;
 
 hamb.addEventListener('click', showHide);
 
-let links = document.querySelectorAll('.menuItem'); // This will give me an ARRAY of values
+let links = document.querySelectorAll('.mobileText'); // This will give me an ARRAY of values
 links.forEach(link => { // We will go through that array one by one, temporarily calling each item 'link' while it is being looked at
     link.addEventListener('click', function(){ // adds the same event listener to each one
         showHide(); // runs the callback function we define below
