@@ -83,7 +83,7 @@ nav > ul {
     color: var(--background);
 }
 
-h2 {
+h3 {
     font-family: "Molengo", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -121,7 +121,7 @@ a:hover {
 #skillsContainer {
     display: grid;
     padding-top: 2.5rem;
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
     place-items: center;
 }
@@ -131,6 +131,9 @@ a:hover {
     color: var(--secondary);
     font-size: 4rem;
     margin-top: -2rem;
+    background-color: hsl(from var(--secondary) h s l / 0.4);
+    width: 100%;
+    border-radius: 10px;
 }
 
 #skillsList {
@@ -189,6 +192,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     max-width: 900px;
+    width: 100%;
     margin: 0 auto 2rem;
     padding: 0 1rem;
 }
@@ -197,10 +201,13 @@ a:hover {
     text-align: center;
     color: var(--secondary);
     font-size: 4rem;
-    padding-top: 2rem;
+    background-color: hsl(from var(--secondary) h s l / 0.4);
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 3rem;
 }
 
-#resumeDiv {
+#resumeSchoolDiv {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
@@ -209,16 +216,69 @@ a:hover {
     margin: 0 auto 2rem;
 }
 
-#resumeItem {
+#resumeItemSchoolTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+#resumeItemSchool {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
     padding: 0.5rem;
+    /* background-color: var(--lightPinkAccent); */
+    border-radius: 10px;
 }
 
-#educationHead {
-    font-size: 2rem;
+#schoolHead {
+    font-size: 1.5rem;
     color: var(--darkPinkAccent);
+}
+
+#resumeOtherDiv {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+}
+
+#resumeOtherHead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+#resumeOtherSubHead {
+    color: var(--darkPinkAccent);
+}
+
+/* About */
+#aboutHeader {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 4rem;
+    background-color: hsl(from var(--secondary) h s l / 0.4);
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 3rem;
+}
+
+/* Contact */
+#contactHeader {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 4rem;
+    background-color: hsl(from var(--secondary) h s l / 0.4);
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 3rem;
 }
 
 /* Sections */
@@ -337,6 +397,10 @@ section {
 
     #skillsContainer {
         width: 95%;
+    }
+
+    #skillsHeader {
+        margin-top: 2rem;
     }
 
     .icons {
