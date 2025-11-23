@@ -121,7 +121,7 @@ a:hover {
 #skillsContainer {
     display: grid;
     padding-top: 2.5rem;
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     place-items: center;
 }
@@ -138,7 +138,7 @@ a:hover {
 
 #skillsList {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
     gap: 1rem;
     place-items: center;
     width: 100%;
