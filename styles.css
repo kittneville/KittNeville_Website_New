@@ -2,8 +2,9 @@
     --primary: #e47184;
     --secondary: #89b8c2;
     --tertiary: #a9bf8a;
+    --paragraphs: #434343;
     --lightPinkAccent: #f49ba3;
-    --background: #feeed9;
+    --background: #fcf6ee;
     --darkPinkAccent: #e14f66;
     --opacity: 0.5;
 }
@@ -11,6 +12,7 @@
 html {
     background: var(--background);
     scroll-behavior: smooth;
+    scroll-padding-top: 12rem;
 }
 
 /* Hero */
@@ -81,6 +83,7 @@ nav > ul {
     font-weight: 400;
     font-style: normal;
     color: var(--background);
+    z-index: 9999;
 }
 
 h3 {
@@ -88,6 +91,10 @@ h3 {
     font-weight: 400;
     font-style: normal;
     color: var(--tertiary);
+}
+
+p {
+    color: var(--paragraphs);
 }
 
 /* Links */
@@ -116,6 +123,157 @@ a:hover {
 #mobileMenu, #hamburger {
     display: none;
 }
+
+/* About */
+#aboutHeader {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 4rem;
+    background-color: hsl(from var(--secondary) h s l / 0.4);
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 3rem;
+}
+
+#aboutContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+}
+
+#aboutMeTextDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    /* HELLO Animation */
+        #helloHeaderTitle span {
+            display: inline-block;
+            font-size: 5rem;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        h4 {
+            color: var(--darkPinkAccent);
+            font-family: "Chewy", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #helloHeaderTitle span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        #helloHeaderTitle span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        #helloHeaderTitle span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        #helloHeaderTitle span:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        #helloHeaderTitle span:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes wave {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+#aboutMeTextDiv {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+}
+
+#aboutMeParagraph {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    font-size: 1.25rem;
+    text-align: center; 
+}
+
+    /* About Me Gallery */
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .galleryDiv {
+            overflow: hidden;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-gap: 10px;
+            max-width: 75vw;
+            max-height: 70vh;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .gallery {
+            overflow: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            width: 100%;
+        }
+
+        .galleryImages {
+            scroll-snap-align: start;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .littleNav {
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+                a {
+                    height: 200px;
+                    display: flex;
+                    margin-bottom: 10px;
+                }
+        }
+
+        .littleNavImage {
+            object-fit: cover;
+            filter: saturate(0);
+            transition: 0.3s ease all;
+
+                &:hover {
+                    transform: scale(1.05);
+                    filter: saturate(1);
+                }
+        }
 
 /* Skills (Section) */
 #skillsContainer {
@@ -191,7 +349,7 @@ a:hover {
     display: grid;
     justify-content: center;
     align-items: center;
-    max-width: 900px;
+    /* max-width: 900px; */
     width: 100%;
     margin: 0 auto 2rem;
     padding: 0 1rem;
@@ -207,6 +365,41 @@ a:hover {
     margin-top: 3rem;
 }
 
+#entireResumeDiv {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+#appleBlossomWrapper {
+    /* width: 450px;
+    height: 100px; */
+    overflow: hidden;
+    flex: 0 0 900px;
+}
+
+#appleBlossoms {
+    width: 450px;
+    height: 750px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    display: block;
+}
+
+#resumeTextElements {
+    flex: 1 1 480px;
+    min-width: 300px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
 #resumeSchoolDiv {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -220,7 +413,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 2.75rem;
     color: var(--secondary);
 }
 
@@ -229,13 +422,20 @@ a:hover {
     flex-direction: column;
     gap: 0.25rem;
     padding: 0.5rem;
-    /* background-color: var(--lightPinkAccent); */
     border-radius: 10px;
 }
 
 #schoolHead {
     font-size: 1.5rem;
     color: var(--darkPinkAccent);
+}
+
+#schoolSubHead {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
 }
 
 #resumeOtherDiv {
@@ -257,17 +457,30 @@ a:hover {
 
 #resumeOtherSubHead {
     color: var(--darkPinkAccent);
+    font-size: 1.5rem;
+    padding: 1rem;
 }
 
-/* About */
-#aboutHeader {
+#linkedinLink {
+    color: var(--darkPinkAccent);
+    font-size: 1.35rem;
+}
+
+#downloadResume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: var(--secondary);
-    font-size: 4rem;
-    background-color: hsl(from var(--secondary) h s l / 0.4);
-    width: 100%;
+    background: var(--lightPinkAccent);
+    padding: 0.5rem;
     border-radius: 10px;
-    margin-top: 3rem;
+    max-width: 30%;
+    margin: 0 auto;
+}
+
+#downloadText {
+    font-size: 1.45rem;
+    color: var(--background);
 }
 
 /* Contact */
@@ -279,6 +492,66 @@ a:hover {
     width: 100%;
     border-radius: 10px;
     margin-top: 3rem;
+}
+
+#contactDiv {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Contact Form */
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 3px solid var(--secondary);
+        border-radius: 20px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        background-color: var(--secondary);
+        color: var(--background);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    input[type=submit]:hover {
+        background-color: var(--darkPinkAccent);
+    }
+
+    #formDiv {
+        border-radius: 20px;
+        background-color: var(--tertiary);
+        padding: 2rem;
+        margin-bottom: 4rem;
+        color: var(--background);
+        max-width: 60vw;
+        margin: 0 2rem 4rem;
+        flex: 1 1 480px;
+        min-width: 280px;
+        box-sizing: border-box;
+    }
+
+#cherryBlossoms {
+    width: 450px;
+    height: 630px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    display: block;
 }
 
 /* Sections */
@@ -296,13 +569,31 @@ section {
     color: var(--tertiary);
 }
 
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    background-color: var(--secondary);
+}
+
+#footerLogo {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 2rem;
+    padding: 1.5rem;
+}
+
 /* Media Query */
 @media (max-width: 599px) {
   #heroMobile {
     display: grid;
     place-content: center;
     box-sizing: border-box;
-    margin-top: -50rem;
+    margin-top: -55rem;
     width: 100%;
     height: auto;
     background-position: center;
@@ -395,12 +686,24 @@ section {
         font-size: 1.5rem;
     }
 
+    /* Gallery */
+
+    /* .galleryDiv {
+        overflow: hidden;
+        height: 50%;
+        display: grid;
+    } */
+
     #skillsContainer {
         width: 95%;
     }
 
     #skillsHeader {
         margin-top: 2rem;
+    }
+
+    #photoLink {
+        font-size: 1.25rem;;
     }
 
     .icons {
@@ -430,8 +733,63 @@ section {
         padding-top: 1rem;
     }
 
-    section {
-        /* height: 75vh; */
+    #entireResumeDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #resumeOtherDiv {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    #resumeOtherHead {
+        margin: 0 0 0.25rem;
+    }
+
+    #resumeOtherSubHead {
+        margin: 0 0 0.6rem;
+        line-height: 1.35;
+    }
+
+    #appleBlossomWrapper {
+        width: 100%;
+        height: 220px;
+        flex: 0 0 auto;
+    }
+
+    #appleBlossoms {
+        height: 250px;
+        width: 750px;
+        object-position: center;
+    }
+
+    #resumeTextElements {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #downloadText {
+        font-size: 1rem;
+    }
+
+    #contactDiv {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #cherryBlossoms {
+        height: 250px;
+        width: 700px;
+        object-position: center;
+    }
+
+    #formDiv {
+        width: 95%;
+        max-width: 95%;
+        height: auto;
+        margin: 0 auto;
     }
   
 }

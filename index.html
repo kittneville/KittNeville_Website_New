@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitt Neville</title>
     <link rel="stylesheet" href="styles.css"/>
+    <!-- Molengo Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Molengo&family=Pirata+One&display=swap" rel="stylesheet">
+    <!-- Chewy Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <!-- Playfair Display Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,9 +30,9 @@
         <nav id="desktopMenu">
             <ul>
                 <li><a href="#heroDesktop">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#resume">Resume</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a id="contactButton" href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -31,9 +40,9 @@
         <nav id="mobileMenu">
             <div>
                 <li><a class="mobileText" href="#heroDesktop">Home</a></li>
+                <li><a class="mobileText" href="#about">About</a></li>
                 <li><a class="mobileText" href="#skills">Skills</a></li>
                 <li><a class="mobileText" href="#resume">Resume</a></li>
-                <li><a class="mobileText" href="#about">About</a></li>
                 <li><a class="mobileText" id="contactButton" href="#contact">Contact</a></li>
             </div>
         </nav>
@@ -79,7 +88,44 @@
                 })();
             </script>
     </div>
-
+    <!-- About -->    
+    <h3 id="aboutHeader">About</h3>
+        <section id="about">
+            <container id="aboutContainer">
+                <!-- Gallery -->
+                <div class="galleryDiv">
+                    <nav class="littleNav">
+                        <a href="#image-1">
+                            <img class="littleNavImage" src="Kitt_WebsiteHeadshot.png" alt="Portrait of Kitt with their name and coloured lines"/>
+                        </a>
+                        <a href="#image-2">
+                            <img class="littleNavImage" src="CapeBreton_MirrorPic.png" alt="Kitt with a camera taking a self portrait in a car mirror"/>
+                        </a>
+                        <a href="#image-3">
+                            <img class="littleNavImage" src="Halloween2023_Portrait.png" alt="Kitt dressed as a vampire"/>
+                        </a>
+                        <a href="#image-4">
+                            <img class="littleNavImage" src="GhostPhoto.png" alt="Two ghosts holding hands"/>
+                        </a>
+                    </nav>
+                    <div class="gallery">
+                        <img class="galleryImages" id="image-1" src="Kitt_WebsiteHeadshot.png" alt="Portrait of Kitt with their name and coloured lines"/>
+                        <img class="galleryImages" id="image-2" src="CapeBreton_MirrorPic.png" alt="Kitt with a camera taking a self portrait in a car mirror"/>
+                        <img class="galleryImages" id="image-3" src="Halloween2023_Portrait.png" alt="Kitt dressed as a vampire"/>
+                        <img class="galleryImages" id="image-4" src="GhostPhoto.png" alt="Two ghosts holding hands"/>
+                    </div>
+                </div>
+                <!-- About Me "Hello"/Paragraph -->
+                <div id="aboutMeTextDiv">
+                    <div id="helloWaveDiv">
+                        <h4 id="helloHeaderTitle">
+                            <span>H</span> <span>E</span> <span>L</span> <span>L</span> <span>O</span>
+                        </h4>
+                    </div>
+                    <p id="aboutMeParagraph">My name is Kitt and I’m an IT Web Programming student and photographer who enjoys creating things that are both functional and nice to look at. My background in photography taught me how to see all the little details, and web programming taught me how to fix the details that break at the worst possible moment. I’m always learning, always experimenting, and always pretending that the bug I just found was totally intentional. I definitely didn’t just spend 20 minutes searching for a missing semicolon…</p>
+                </div>
+            </container>
+        </section>
     <!-- Skills -->  
     <h3 id="skillsHeader">Skills</h3> 
         <section id="skills">
@@ -99,52 +145,88 @@
     <h3 id="resumeHeader">Resume</h3>    
         <section id="resume">
                 <container id="resumeContainer">
-                    <div id="resumeItemSchoolTitle">Schooling</div>
-                    <div id="resumeSchoolDiv">
-                        <div id="resumeItemSchool">
-                            <p id="schoolHead">IT Web Programming</p>
-                            <p id="schoolSubHead">Nova Scotia Community College, 2025 - Current</p>
+                    <div id="entireResumeDiv">
+                        <div id="appleBlossomsWrapper">
+                            <img src="AppleBlossoms.jpg" alt="Apple Blossoms" id="appleBlossoms">
                         </div>
-                        <div id="resumeItemSchool">
-                            <p id="schoolHead">Professional Photography</p>
-                            <p id="schoolSubHead">Nova Scotia Community College, 2017 - 2019</p>
-                        </div>
-                        <div id="resumeItemSchool">
-                            <p id="schoolHead">Applied Media and Communications Arts</p>
-                            <p id="schoolSubHead">Nova Scotia Community College, 2016 - 2017</p>
-                        </div>
-                    </div>
-                    <div id="resumeOtherDiv">
-                        <div id="resumeItemOther">
-                            <p id="resumeOtherHead">Volunteer Work</p>
-                            <p id="resumeOtherSubHead">Hope For Wildlife Rescuer, 2025</p>
-                        </div>
-                        <div id="resumeItemOther">
-                            <p id="resumeOtherHead">Competitions</p>
-                            <p id="resumeOtherSubHead">Challenge NS, 2025</p>
-                        </div>
-                        <div id="resumeItemOther">
-                            <p id="resumeOtherHead">Certifications</p>
-                            <p id="resumeOtherSubHead">Please see my LinkedIn for a list of my certifications</p>
+                        <div id="resumeTextElements">
+                            <div id="resumeItemSchoolTitle">Schooling</div>
+                            <div id="resumeSchoolDiv">
+                                <div id="resumeItemSchool">
+                                    <p id="schoolHead">IT Web Programming</p>
+                                    <p id="schoolSubHead">Nova Scotia Community College, 2025 - Current</p>
+                                </div>
+                                <div id="resumeItemSchool">
+                                    <p id="schoolHead">Professional Photography</p>
+                                    <p id="schoolSubHead">Nova Scotia Community College, 2017 - 2019</p>
+                                </div>
+                                <div id="resumeItemSchool">
+                                    <p id="schoolHead">Applied Media and Comm. Arts</p>
+                                    <p id="schoolSubHead">Nova Scotia Community College, 2016 - 2017</p>
+                                </div>
+                            </div>
+                            <div id="resumeOtherDiv">
+                                <div id="resumeItemOther">
+                                    <p id="resumeOtherHead">Volunteering</p>
+                                    <p id="resumeOtherSubHead">Hope For Wildlife Rescuer, 2025</p>
+                                </div>
+                                <div id="resumeItemOther">
+                                    <p id="resumeOtherHead">Competitions</p>
+                                    <p id="resumeOtherSubHead">Challenge NS, 2025</p>
+                                </div>
+                                <div id="resumeItemOther">
+                                    <p id="resumeOtherHead">Certifications</p>
+                                    <p id="resumeOtherSubHead">Please see my <a href="https://www.linkedin.com/in/kitt-neville/" target="_blank" id="linkedinLink">LinkedIn</a> for a list of my certifications</p>
+                                </div>
+                            </div>
+                            <div id="downloadResume">
+                                <a href="KittNevilleResume.pdf" download="KittsResume">    
+                                    <p id="downloadText">Download my Resume</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </container>
             </section>
-    <!-- About -->    
-    <h3 id="aboutHeader">About</h3>
-        <section id="about">
-            <container id="aboutContainer">
-                
-            </container>
-        </section>
     <!-- Contact -->
     <h3 id="contactHeader">Contact</h3>
         <section id="contact">
             <container id="contactContainer">
-    
+                <div id="contactDiv">
+                    <div id="formDiv">
+                        <form action="send_email.php" mathod="POST">
+
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                            </select>
+
+                            <label for="subject">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                            <input type="submit" value="Submit">
+
+                        </form>
+                    </div>
+                    <div id="cherryBlossomWrapper">
+                        <img src="CherryBlossoms.jpg" alt="Photo of cherry blossoms" id="cherryBlossoms">
+                    </div>
+                </div>
             </container>
         </section>
     </main>
 <script src="main.js"></script>
+    <footer>
+        <a href="https://github.com/kittneville" target="_blank"><img src="github.png" alt="GitHub logo" id="footerLogo"></a>
+        <a href="https://www.linkedin.com/in/kitt-neville/" target="_blank"><img src="linkedin.png" alt="LinkedIn logo" id="footerLogo"></a>
+        <a href="https://www.instagram.com/kittcophoto" target="_blank"><img src="instagram.png" alt="Instagram logo" id="footerLogo"></a>
+    </footer>
 </body>
 </html>
