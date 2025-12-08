@@ -823,7 +823,7 @@ footer {
 }
 
 /* Tablet Media Query */
-@media (max-width: 1650px){
+@media (max-width: 1000px){
   #heroMobile {
     display: grid;
     place-content: center;
