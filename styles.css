@@ -587,8 +587,8 @@ footer {
     padding: 1.5rem;
 }
 
-/* Media Query */
-@media (max-width: 599px) {
+/* Phone Media Query */
+@media (max-width: 599px){
   #heroMobile {
     display: grid;
     place-content: center;
@@ -607,7 +607,7 @@ footer {
     max-width: calc(100% - 4rem);
     height: auto;
     margin: 0 auto;
-    margin-top: -2rem;
+    /* margin-top: -2rem; */
     object-fit: cover;
     border-radius: 6px;
   }
@@ -688,11 +688,275 @@ footer {
 
     /* Gallery */
 
-    /* .galleryDiv {
-        overflow: hidden;
-        height: 50%;
+    .galleryDiv {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: -10rem;
+    }
+
+    .gallery {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        display: flex;
+    }
+
+    .littleNav {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .littleNav a {
+        height: 80px;
+        width: 80px;
+    }
+
+    .littleNavImage {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    #skillsContainer {
+        width: 95%;
+    }
+
+    #skillsHeader {
+        margin-top: 2rem;
+    }
+
+    #photoLink {
+        font-size: 1.25rem;;
+    }
+
+    .icons {
+        height: 3rem;
+        width: 3rem;
+        padding: 1rem;
+    }
+
+    .icons:hover {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    #skillsList {
         display: grid;
-    } */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 600px;
+    }
+
+    #skillsList p::after {
+        font-size: 0.875rem;
+    }
+
+    #resumeDiv {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-top: 1rem;
+    }
+
+    #entireResumeDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #resumeOtherDiv {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    #resumeOtherHead {
+        margin: 0 0 0.25rem;
+    }
+
+    #resumeOtherSubHead {
+        margin: 0 0 0.6rem;
+        line-height: 1.35;
+    }
+
+    #appleBlossomWrapper {
+        width: 100%;
+        height: 220px;
+        flex: 0 0 auto;
+    }
+
+    #appleBlossoms {
+        height: 250px;
+        width: 750px;
+        object-position: center;
+    }
+
+    #resumeTextElements {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #downloadText {
+        font-size: 1rem;
+    }
+
+    #contactDiv {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #cherryBlossoms {
+        height: 250px;
+        width: 700px;
+        object-position: center;
+    }
+
+    #formDiv {
+        width: 95%;
+        max-width: 95%;
+        height: auto;
+        margin: 0 auto;
+    }
+  
+}
+
+/* Tablet Media Query */
+@media (max-width: 1650px){
+  #heroMobile {
+    display: grid;
+    place-content: center;
+    box-sizing: border-box;
+    margin-top: -55rem;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #heroMobile img {
+    display: block;
+    width: calc(100% - 4rem);
+    max-width: calc(100% - 4rem);
+    height: auto;
+    margin: 0 auto;
+    /* margin-top: -2rem; */
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  #heroDesktop > img {
+    display: none;
+  }
+
+  nav > ul {
+    font-size: 1.25rem;
+  }
+
+  #desktopMenu {
+        display: none;
+    }
+
+    #header {
+        background-color: var(--tertiary);
+    }
+
+    #mobileMenu {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: white;
+        background-color: var(--tertiary);
+        list-style: none;
+        z-index: 10;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .200s ease-in-out;
+        padding: 0.75rem;
+    }
+
+    #hamburger {
+        background-color: var(--darkPinkAccent);
+        height: 3rem;
+        width: 3rem;
+        margin: 1rem auto;
+        padding: 0.25rem;
+        border-radius: 10px;
+        cursor: pointer;
+        display: block;
+        align-items: center;
+        border: 3px solid var(--tertiary);
+    }
+
+    .hamline {
+        width: 80%;
+        height: 2px;
+        background-color: var(--background);
+    }
+
+    .mobileText {
+        display: block;
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        font-family: "Molengo", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--background);
+        transition: all 0.3s ease-in;
+        transition: all 0.3s ease-out;
+        font-size: 1.4rem;
+    }  
+
+    a:hover {
+        color: var(--darkPinkAccent);
+        font-size: 1.5rem;
+    }
+
+    /* Gallery */
+
+    .galleryDiv {
+        display: flex;
+        flex-direction: column-reverse;
+        /* margin-top: -10rem; */
+    }
+
+    .gallery {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        display: flex;
+    }
+
+    .littleNav {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        /* overflow-x: scroll; */
+        overflow-y: hidden;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .littleNav a {
+        height: 80px;
+        width: 80px;
+    }
+
+    .littleNavImage {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+    }
 
     #skillsContainer {
         width: 95%;
